@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+    <bean id="ChapterOneService" class="com.chapter1.ioc.injection.service.ChapterOneServiceImpl">
+        <!--属性注入-->
+        <property name="chapterOneDAO"  ref="ChapterOneDAO"></property>
+        <!--构造注入-->
+        <!--<constructor-arg ref="ChapterOneDAO" name="chapterOneDAO"></constructor-arg>-->
+    </bean>
+
+    <bean id="ChapterOneDAO" class="com.chapter1.ioc.injection.dao.ChapterOneDAOImpl"></bean>
+</beans>
