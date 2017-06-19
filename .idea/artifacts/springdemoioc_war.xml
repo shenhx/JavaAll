@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springdemoioc:war">
+    <output-path>$PROJECT_DIR$/springdemoioc/target</output-path>
+    <root id="archive" name="springdemo-ioc.war">
+      <element id="artifact" artifact-name="springdemoioc:war exploded" />
+    </root>
+  </artifact>
+</component>
