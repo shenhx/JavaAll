@@ -9,6 +9,7 @@
     <modules>
         <module>springdemo</module>
         <module>springdemoioc</module>
+        <module>springdemotest</module>
     </modules>
     <name>maven java demos</name>
     <url>http://maven.apache.org</url>

@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springdemo" />
         <module name="springdemoioc" />
+        <module name="springdemotest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JavaAll" target="1.5" />
       <module name="springdemo" target="1.5" />
       <module name="springdemoioc" target="1.5" />
+      <module name="springdemotest" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
