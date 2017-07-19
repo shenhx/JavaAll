@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration scan="true" scanPeriod="1 seconds">
+    <ContextListener class="">
+        <resetJUL>true</resetJUL>
+    </ContextListener>
+    <JmxConfigurator/>
+    <appender name="console" class="">
+        <encoder>
+            <pattern>logback: %d{HH:mm:ss.sss} %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="org.springframework.web" level="DEBUG"/>
+    <roo level="info">
+        <appender-ref ref="console"/>
+    </roo>
+</Configuration>
