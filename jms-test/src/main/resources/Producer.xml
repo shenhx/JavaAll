@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
-    <!--开启注解的配置-->
-    <context:annotation-config />
-    <!--activemq提供的ConnectionFactory-->
-    <bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-        <property name="brokerURL" value="tcp://127.0.0.1:61616"/>
-    </bean>
-    <!--spirng jms提供的连接池-->
-    <bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
-        <property name="targetConnectionFactory" ref="targetConnectionFactory" />
-    </bean>
 
-    <bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
-        <constructor-arg value="queue" />
-    </bean>
+    <import resource="Common.xml"/>
 
     <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory" ref="connectionFactory"></property>
     </bean>
 
-    <bean class="com.shenhx.jms.producer.ProducerServiceImpl" />
+    <bean name="queueProducerService" class="com.shenhx.jms.producer.ProducerServiceImpl" />
+    <bean name="topicProducerService" class="com.shenhx.jms.producer.TopicProducerServiceImpl"/>
 </beans>
