@@ -1,0 +1,3 @@
+com\test\base\UnitTestBase.class
+com\test\chapter1\injection\service\ChapterOneServiceImplTest.class
+com\test\chapter1\ioc\interfaces\ChapterOneInterfaceTest.class

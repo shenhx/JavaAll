@@ -13,6 +13,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JavaAll" target="1.5" />
+      <module name="springboot-demo" target="1.5" />
       <module name="springdemo" target="1.5" />
       <module name="springdemoioc" target="1.5" />
       <module name="springdemotest" target="1.5" />
