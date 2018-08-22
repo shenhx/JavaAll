@@ -1,12 +1,18 @@
-*.class
+/ws/*
+/target/*
+/bin/*
+/*/target/*
+/*/bin/*
+/*/.*
+.*
+/*.bat
+!.travis.yml
+*.iml
+cat-client/src/main/resources/com/dianping/cat/configuration/client/config.xsd
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+cat-client/src/main/resources/com/dianping/cat/status/model/status.xsd
 
-# Package Files #
-*.jar
-*.war
-*.ear
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+cat-client/src/main/resources/com/dianping/cat/configuration/client/config.xsd
+
+cat-client/src/main/resources/com/dianping/cat/status/model/status.xsd
