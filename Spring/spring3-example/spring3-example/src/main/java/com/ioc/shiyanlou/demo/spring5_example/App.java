@@ -73,7 +73,6 @@ public class App {
 		Customer lists = (Customer) context.getBean("customerBean");
         System.out.println(lists.getLists().toString());*/
 		// annotation
-		// todo 注解还存在问题
 		context = new AnnotationConfigApplicationContext(AppConfig.class);
         IAmimal obj = (IAmimal) context.getBean("animal");
         obj.makeSound();
