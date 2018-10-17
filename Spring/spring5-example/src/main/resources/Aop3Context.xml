@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="customerService" class="com.aop.shiyanlou.demo.advice.CustomerService">
+		<property name="name" value="baidu.com"></property>
+		<property name="url" value="http://baidu.com"></property>
+	</bean>
+	<bean id="productService" class="com.aop.shiyanlou.demo.advice.ProductService">
+		<property name="name" value="libai"></property>
+		<property name="price" value="10.5"></property>
+	</bean>
+	<!-- 自动创建proxy -->
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>customerAdvisor</value>
+			</list>
+		</property>
+	</bean>
+	<!-- before -->
+	<bean id="myBeforeMethod" class="com.aop.shiyanlou.demo.advice.MyBeforeMethod" />
+	<!-- after -->
+	<bean id="myAfterReturningMethod" class="com.aop.shiyanlou.demo.advice.MyAfterReturningMethod" />
+	<!-- Exception -->
+	<bean id="myThrowExceptionMethod" class="com.aop.shiyanlou.demo.advice.MyThrowExceptionMethod"></bean>
+	<!-- Around -->
+	<bean id="myAroundMethod" class="com.aop.shiyanlou.demo.advice.MyAroundMethod"></bean>
+	<!-- pointcut -->
+	<bean id="customerPointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedName" value="toString"></property>
+	</bean>
+	<bean id="customerAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="pointcut" ref="customerPointCut"></property>
+		<property name="advice" ref="myAroundMethod" />
+	</bean>
+</beans>
