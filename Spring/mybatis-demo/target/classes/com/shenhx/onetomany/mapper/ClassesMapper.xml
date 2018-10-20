@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shenhx.onetomany.mapper.ClassesMapper">
+
+	<select id="selectClassAndStudentsById" parameterType="int"
+		resultMap="classmap2">
+		select c.*,s.fid fstu_id,s.fname fstu_name,s.fsex,s.fage
+		from tb_class c left outer join tb_student s
+		on c.fid = s.fclass_id where c.fid=#{id}
+	</select>
+
+	<!-- resultMap:映射实体类和字段之间的一一对应的关系 -->
+	<resultMap id="classmap2" type="Classes">
+		<id property="id" column="fid" />
+		<result property="name" column="fname" />
+		<!-- 一对多关联映射：collection -->
+		<collection property="students" ofType="Student">
+			<id property="id" column="fstu_id" />
+			<result property="name" column="fstu_name" />
+			<result property="sex" column="fsex" />
+			<result property="age" column="fage" />
+		</collection>
+	</resultMap>
+</mapper>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shenhx.dynamicsql.mapper.UserMapper">
+
+	<resultMap id="usermap" type="User">
+		<id property="id" column="fid" />
+		<result property="username" column="fusername" />
+		<result property="phone" column="fphone" />
+		<result property="address" column="faddress" />
+		<result property="password" column="fpassword" />
+		<result property="age" column="fage" />
+		<result property="sex" column="fsex"/>
+	</resultMap>
+
+	<!-- if -->
+	<select id="selectUserList" resultMap="usermap">
+		select * from tb_user where 1=1
+		<if test="phone != null">
+			and fphone like #{phone}
+		</if>
+	</select>
+
+	<!-- choose -->
+	<select id="selectUserList2" resultMap="usermap">
+		select * from tb_user where 1=1
+		<choose>
+			<when test="username != null">
+				and fusername like #{username}
+			</when>
+			<otherwise>
+				and fphone != null
+			</otherwise>
+		</choose>
+	</select>
+
+	<!-- trim -->
+	<!-- trim 元素可以给自己包含的内容加上前缀（prefix）或加上后缀（suffix），也可以把包含内容的首部（prefixOverrides）或尾部（suffixOverrides）某些内容移除。 -->
+<!-- 	<select id="selectUserList3" resultType="User"> -->
+<!-- 		select * from tb_user -->
+<!-- 		<trim prefix="where" prefixOverrides="and |or "> -->
+<!-- 			<if test="fphone != null"> -->
+<!-- 				and fphone like #{phone} -->
+<!-- 			</if> -->
+<!-- 		</trim> -->
+<!-- 	</select> -->
+
+	<!-- where -->
+<!-- 	<select id="selectUserList4" resultType="User"> -->
+<!-- 		select * from tb_user -->
+<!-- 		<where> -->
+<!-- 			<if test="fphone != null"> -->
+<!-- 				and fphone like #{phone} -->
+<!-- 			</if> -->
+<!-- 		</where> -->
+<!-- 	</select> -->
+
+
+<!-- set -->
+<!-- <update id="updateUser"> -->
+<!--       update tb_user -->
+<!--     <set> -->
+<!--           <if test="fphone != null">phone=#{phone},</if> -->
+<!--           <if test="faddress != null">address=#{address}</if> -->
+<!--     </set> -->
+<!--       where fid=#{id} -->
+<!-- </update> -->
+
+<!-- foreach -->
+<!-- <select id="selectUserList5" resultType="User"> -->
+<!-- 	select * from tb_user where fid in -->
+<!-- 	<foreach item="item" index="index" collection="list" open="(" separator="," close=")"> -->
+<!-- 		#{item} -->
+<!-- 	</foreach> -->
+<!-- </select> -->
+
+<!-- bind -->
+<!-- <select id="selectUserList6" resultType="User"> -->
+<!--       <bind name="pattern" value="'%' + _parameter.getPhone() + '%'" /> -->
+<!--       select * from tb_user where fphone like #{pattern} -->
+<!-- </select> -->
+
+</mapper>

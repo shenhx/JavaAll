@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shenhx.onetoone.mapper.ClassesMapper">
+
+	<select id="selectClassById" parameterType="int" resultMap="classesmap">
+		select c.*,t.fid fhtid,t.fname fhtname,t.fage from tb_class c, tb_head_teacher t where c.fht_id = t.fid and
+		c.fid=#{id}
+	</select>
+
+	<!-- 嵌套写法 -->
+	<!-- resultMap:映射实体类和字段之间的一一对应的关系 -->
+	<resultMap id="classesmap" type="Classes">
+		<id property="id" column="fid" />
+		<result property="name" column="fname" />
+		<!-- 一对一关联映射：association -->
+		<association property="teacher" javaType="HeadTeacher">
+			<id property="id" column="fhtid" />
+			<result property="name" column="fhtname" />
+			<result property="age" column="fage" />
+		</association>
+	</resultMap>
+
+	<!-- 独立写法 -->
+	<!-- <resultMap id="teachermap" type="HeadTeacher"> -->
+	<!-- <id property="id" column="fhtid" /> -->
+	<!-- <result property="name" column="fhtname" /> -->
+	<!-- <result property="age" column="fage" /> -->
+	<!-- </resultMap> -->
+
+	<!-- <resultMap id="classesmap" type="Classes"> -->
+	<!-- <id property="id" column="fid"/> -->
+	<!-- <result property="name" column="fname"/> -->
+	<!-- 一对一关联 -->
+	<!-- 有bug，一对一关联的名称相同会覆盖 -->
+	<!-- <association property="teacher" column="fht_id" javaType="HeadTeacher" 
+		resultMap="teachermap"></association> -->
+	<!-- </resultMap> -->
+
+</mapper>

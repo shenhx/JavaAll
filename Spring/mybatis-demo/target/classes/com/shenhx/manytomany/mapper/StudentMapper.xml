@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shenhx.manytomany.mapper.StudentMapper">
+
+	<select id="selectStudentCourse" resultMap="studentCourseMap">
+		select
+		s.fid fstu_id,s.fname fstu_name,
+		s.fage,s.fsex,c.fid fcourse_id,c.fname fcourse_name,c.fcredit
+		from
+		tb_student s,tb_course c,tb_select_course sc
+		where s.fid = sc.fstu_id
+		and c.fid = sc.fcourse_id
+	</select>
+
+	<delete id="deleteStudentCourseById" parameterType="StudentCourseLink">
+		delete from tb_select_course where fstu_id=#{student.id} and fcourse_id
+		=#{course.id}
+	</delete>
+
+	<resultMap id="courseMap" type="Course">
+		<id property="id" column="fcourse_id" />
+		<result property="name" column="fcourse_name" />
+		<result property="credit" column="fcredit" />
+	</resultMap>
+
+	<resultMap id="studentCourseMap" type="Student">
+		<id property="id" column="fstu_id" />
+		<result property="name" column="fstu_name" />
+		<result property="sex" column="fsex" />
+		<result property="age" column="fage" />
+		<collection property="courses" ofType="Course" resultMap="courseMap"></collection>
+	</resultMap>
+
+</mapper>
