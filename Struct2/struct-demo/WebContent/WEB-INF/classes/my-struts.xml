@@ -32,6 +32,11 @@
 			<interceptor-ref name="myInterceptorStack" />
 			<result name="success">/Jsp/HelloWorld.jsp</result>
 		</action>
+		
+		<action name="ognltest" class="com.shenhx.demo.actions.OgnlTestAction"
+		method="test">
+			<result name="default">/Jsp/OgnlTest.jsp</result>
+		</action>
 	</package>
 </struts>
 

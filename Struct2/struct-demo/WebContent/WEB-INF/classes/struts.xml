@@ -17,6 +17,8 @@
 <!-- START SNIPPET: xworkSample -->
 <struts>
 	<constant name="struts.devMode" value="true" />
+	<!-- Struts2中配置ognl调用静态属性或者方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
 	
 	<include file="my-struts.xml"></include>
 	
