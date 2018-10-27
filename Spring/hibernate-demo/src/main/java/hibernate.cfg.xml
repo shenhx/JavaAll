@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+
+		<property name="connection.username">root</property>
+
+		<property name="connection.password">123456</property>
+		<!-- 数据库使用的方言innodb -->
+		<property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<!-- 设置 打印输出 sql 语句 为真 -->
+		<property name="show_sql">true</property>
+
+		<!-- 设置格式为 sql -->
+		<property name="format_sql">true</property>
+
+		<!-- 第一次加载 hibernate 时根据实体类自动建立表结构，以后自动更新表结构 -->
+		<!-- <property name="hbm2ddl.auto">update</property> -->
+
+		<!-- 映射文件 -->
+<!-- 		<mapping resource="com/shenhx/demo/entity/User.hbm.xml" /> -->
+<!-- 		<mapping resource="com/shenhx/demo/entity/Group.hbm.xml" /> -->
+		<mapping resource="com/shenhx/demo/manytoone/User.hbm.xml" />
+		<mapping resource="com/shenhx/demo/manytoone/Group.hbm.xml" />
+		<mapping resource="com/shenhx/demo/manytomany/Student.hbm.xml" />
+		<mapping resource="com/shenhx/demo/manytomany/Course.hbm.xml" />
+		<mapping class="com.shenhx.demo.ejb.User"/>
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.shenhx.demo.hibernate_demo.AppTest" time="0.047" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="C:\Users\623724489\Desktop\hibernate-demo\hibernate-demo\target\test-classes;C:\Users\623724489\Desktop\hibernate-demo\hibernate-demo\target\classes;E:\WorkSpaces\Java\M2_Respository\junit\junit\4.11\junit-4.11.jar;E:\WorkSpaces\Java\M2_Respository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;E:\WorkSpaces\Java\M2_Respository\io\agroal\agroal-pool\0.4\agroal-pool-0.4.jar;E:\WorkSpaces\Java\M2_Respository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;E:\WorkSpaces\Java\M2_Respository\org\hibernate\hibernate-core\5.3.7.Final\hibernate-core-5.3.7.Final.jar;E:\WorkSpaces\Java\M2_Respository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;E:\WorkSpaces\Java\M2_Respository\org\javassist\javassist\3.23.1-GA\javassist-3.23.1-GA.jar;E:\WorkSpaces\Java\M2_Respository\net\bytebuddy\byte-buddy\1.8.17\byte-buddy-1.8.17.jar;E:\WorkSpaces\Java\M2_Respository\antlr\antlr\2.7.7\antlr-2.7.7.jar;E:\WorkSpaces\Java\M2_Respository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;E:\WorkSpaces\Java\M2_Respository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;E:\WorkSpaces\Java\M2_Respository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;E:\WorkSpaces\Java\M2_Respository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;E:\WorkSpaces\Java\M2_Respository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;E:\WorkSpaces\Java\M2_Respository\org\hibernate\common\hibernate-commons-annotations\5.0.4.Final\hibernate-commons-annotations-5.0.4.Final.jar;E:\WorkSpaces\Java\M2_Respository\io\agroal\agroal-api\0.4\agroal-api-0.4.jar;E:\WorkSpaces\Java\M2_Respository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="E:\Programs\jdk1.8\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\623724~1\AppData\Local\Temp\surefire988415949398614188\surefirebooter4311703374209231252.jar C:\Users\623724489\AppData\Local\Temp\surefire988415949398614188 2018-10-25T00-13-18_167-jvmRun1 surefire2100569000157143732tmp surefire_0401825202929475926tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\623724489\Desktop\hibernate-demo\hibernate-demo\target\test-classes;C:\Users\623724489\Desktop\hibernate-demo\hibernate-demo\target\classes;E:\WorkSpaces\Java\M2_Respository\junit\junit\4.11\junit-4.11.jar;E:\WorkSpaces\Java\M2_Respository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;E:\WorkSpaces\Java\M2_Respository\io\agroal\agroal-pool\0.4\agroal-pool-0.4.jar;E:\WorkSpaces\Java\M2_Respository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;E:\WorkSpaces\Java\M2_Respository\org\hibernate\hibernate-core\5.3.7.Final\hibernate-core-5.3.7.Final.jar;E:\WorkSpaces\Java\M2_Respository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;E:\WorkSpaces\Java\M2_Respository\org\javassist\javassist\3.23.1-GA\javassist-3.23.1-GA.jar;E:\WorkSpaces\Java\M2_Respository\net\bytebuddy\byte-buddy\1.8.17\byte-buddy-1.8.17.jar;E:\WorkSpaces\Java\M2_Respository\antlr\antlr\2.7.7\antlr-2.7.7.jar;E:\WorkSpaces\Java\M2_Respository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;E:\WorkSpaces\Java\M2_Respository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;E:\WorkSpaces\Java\M2_Respository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;E:\WorkSpaces\Java\M2_Respository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;E:\WorkSpaces\Java\M2_Respository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;E:\WorkSpaces\Java\M2_Respository\org\hibernate\common\hibernate-commons-annotations\5.0.4.Final\hibernate-commons-annotations-5.0.4.Final.jar;E:\WorkSpaces\Java\M2_Respository\io\agroal\agroal-api\0.4\agroal-api-0.4.jar;E:\WorkSpaces\Java\M2_Respository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\623724489"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="E:\Programs\jdk1.8\jre"/>
+    <property name="basedir" value="C:\Users\623724489\Desktop\hibernate-demo\hibernate-demo"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\623724~1\AppData\Local\Temp\surefire988415949398614188\surefirebooter4311703374209231252.jar"/>
+    <property name="sun.boot.class.path" value="E:\Programs\jdk1.8\jre\lib\resources.jar;E:\Programs\jdk1.8\jre\lib\rt.jar;E:\Programs\jdk1.8\jre\lib\sunrsasign.jar;E:\Programs\jdk1.8\jre\lib\jsse.jar;E:\Programs\jdk1.8\jre\lib\jce.jar;E:\Programs\jdk1.8\jre\lib\charsets.jar;E:\Programs\jdk1.8\jre\lib\jfr.jar;E:\Programs\jdk1.8\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
+    <property name="user.name" value="623724489"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.3"/>
+    <property name="java.endorsed.dirs" value="E:\Programs\jdk1.8\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="E:\WorkSpaces\Java\M2_Respository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\623724~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="user.dir" value="C:\Users\623724489\Desktop\hibernate-demo\hibernate-demo"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="E:\Programs\jdk1.8\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/Programs/jdk1.8/bin/../jre/bin/server;E:/Programs/jdk1.8/bin/../jre/bin;E:/Programs/jdk1.8/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\Programs\Git\cmd;E:\Programs\jdk1.8\bin;E:\Programs\jdk1.8\jre\bin;E:\Programs\TortoiseGit\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\Programs\Svn\bin;E:\Programs\apache-maven-3.3.9\bin;C:\ProgramData\Oracle\Java\javapath;E:\Programs\Vs2017\MSBuild\15.0\Bin\amd64;E:\Programs\graphviz-2.38\bin;;C:\Program Files (x86)\Microsoft VS Code\bin;E:\Programs\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.ext.dirs" value="E:\Programs\jdk1.8\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="com.shenhx.demo.hibernate_demo.AppTest" time="0"/>
+</testsuite>

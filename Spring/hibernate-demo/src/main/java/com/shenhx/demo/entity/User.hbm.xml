@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.shenhx.demo.entity">
+	<class name="User" table="tb_user">
+		<id name="id" column="fid">
+			<!-- assigned/native -->
+			<generator class="native" />
+		</id>
+		<property name="username" column="fusername" />
+		<property name="password" column="fpassword" />
+	</class>
+</hibernate-mapping>

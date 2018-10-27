@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.shenhx.demo.manytomany">
+	<class name="Student" table="tb_student">
+		<id name="id" column="fid">
+			<!-- assigned/native -->
+			<generator class="native" />
+		</id>
+		<property name="stuname" column="fname" />
+		
+		<set name="courses" cascade="save-update" inverse="true" table="tb_select_course">
+			<key column="fstu_id" not-null="true"></key>
+			<many-to-many class="Course" column="fc_id"></many-to-many>
+		</set>
+		
+	</class>
+</hibernate-mapping>
